@@ -1,0 +1,24 @@
+body {
+    background-color: #666;
+    text-align: center;
+    color: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+#principal {
+    background-color: #EEE;
+    color: #222;
+}
+
+.vermelho {
+    background-color: #900;
+    color: #222;
+}
+
+.negrito {
+    font-weight: bold;
+}

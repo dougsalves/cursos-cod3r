@@ -1,0 +1,32 @@
+body {
+    background-color: #777;
+    color: #EEE;
+    display: flexbox;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navegacao {
+    background-color: #2145ff;
+    color: #EEE;
+    margin-right: 5px;
+    text-decoration-line: none;
+    padding: 0px 5px;
+}
+
+.navegacao:hover {
+    background-color: #dedede;
+    color: #2145ff;
+}
+
+#conteudo {
+    padding: 10px 10px;
+    color: #333;
+    background-color: #dedede;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #444;
+    margin-top: 10px;
+    text-align: center;
+}

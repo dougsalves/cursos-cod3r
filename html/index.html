@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicios - HTML</title>
+        <link rel="icon" href="img/icone.png" />
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body id="cabecalho">
+        <header>
+            <h1>Modulo de HTML - Usando padrão SPA</h1>
+        </header>
+
+        <nav>
+            <a class="navegacao" href wm-nav="exercicios/175_texto1.html">01 - Texto 1</a>
+            <a class="navegacao" href wm-nav="exercicios/176_texto2.html">02 - Texto 2</a>
+            <a class="navegacao" href wm-nav="exercicios/177_listas.html">03 - Listas</a>
+            <a class="navegacao" href wm-nav="exercicios/178_listaAninhada.html">04 - Lista Aninhada</a>
+            <a class="navegacao" href wm-nav="exercicios/180_links.html">05 - Links</a>
+            <a class="navegacao" href wm-nav="exercicios/182_tabela.html">06 - Tabela</a>
+            <a class="navegacao" href wm-nav="exercicios/form/183_form.html">07 - Formulário</a>
+        </nav>
+
+        <section id="conteudo">Pagina Inicial</section>
+
+        <footer>
+            Curso Web Moderno - Cod3r
+        </footer>
+
+        <script>
+            document.querySelectorAll('[wm-nav]').forEach(link => {
+                const conteudo = document.getElementById('conteudo')
+
+                link.onclick = function(e) {
+                    e.preventDefault()
+                    fetch(link.getAttribute('wm-nav'))
+                        .then(resp => resp.text())
+                        .then(html => conteudo.innerHTML = html)
+                }
+            })
+        </script>
+    </body>
+</html>

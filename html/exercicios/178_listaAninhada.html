@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<style>
+    .show {
+        display: block;
+    }
+
+    .hide {
+        display: none;
+    }
+</style>
+
+<h2>Projeto</h2>
+
+<ul class="tree">
+    <li>
+        <a href="#">backend</a>
+        <ul class="hide">
+            <li>
+                <a href="#">app</a>
+                <ul class="hide">
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">config</a>
+                <ul class="hide">
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">frontend</a>        
+        <ul class="hide">
+            <li>
+                <a href="#">public</a>
+                <ul class="hide">
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    document.querySelectorAll('a').forEach(link => {
+        link.onclick = function(e){
+            e.preventDefault()
+
+            const item = link.nextElementSibling
+            const estado = item.style.display
+            item.style.display = estado === 'block' ? 'none' : 'block'
+
+            //item.classList.toggle('hide')
+        }
+    })
+</script>
